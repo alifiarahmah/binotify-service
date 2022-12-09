@@ -1,0 +1,103 @@
+.song-item-container {
+	--templating: 50px 2fr 2fr 1fr 1fr;
+
+	color: var(--text-primary);
+	text-decoration: none;
+	display: block;
+	padding: 0.5rem;
+	width: 100%;
+	align-content: center;
+	grid-template-columns: var(--templating);
+	row-gap: 0.5rem;
+	column-gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+	.song-item-container {
+		margin-top: 5vh;
+		display: grid;
+	}
+}
+
+.header-row {
+	display: none;
+	text-transform: uppercase;
+	color: var(--text-secondary);
+}
+
+@media screen and (min-width: 768px) {
+	.header-row {
+		display: grid;
+	}
+}
+
+.content-row {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 2fr;
+	grid-template-areas:
+		"picture title title"
+		"picture artist artist"
+		"picture date genre"
+	;
+	padding: 0.5rem 0;
+	text-decoration: none;
+	color: var(--text-primary);
+	grid-column: 1 / -1;
+	column-gap: inherit;
+}
+
+@media screen and (min-width: 768px) {
+	.content-row {
+		display: grid;
+		grid-template-columns: var(--templating);
+		grid-template-areas:
+			"picture title artist date genre";
+	}
+}
+
+.content-row:hover {
+	background-color: var(--grey);
+}
+
+.song-number,
+.album-number {
+	grid-area: id;
+	width: 50px;
+}
+
+.song-picture,
+.album-picture {
+	justify-self: center;
+	grid-area: picture;
+	width: 42px;
+	height: 42px;
+	background-color: var(--gray);
+}
+
+.song-title,
+.album-title {
+	grid-area: title;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.song-artist,
+.album-artist {
+	grid-area: artist;
+}
+
+.song-date,
+.album-date {
+	grid-area: date;
+}
+
+.song-date::before,
+.album-date::before {
+	margin: 0 0.1rem;
+}
+
+.song-genre,
+.album-genre {
+	grid-area: genre;
+}

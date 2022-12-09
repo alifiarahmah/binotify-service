@@ -1,0 +1,89 @@
+/* button */
+/* variants: solid, outline, unstyled */
+
+/* unstyled */
+
+button {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    padding: 1rem 2.5rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border: none;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* solid */
+
+.button-solid {
+    color: var(--text-primary-black);
+    background-color: var(--yellow);
+}
+
+.button-solid:hover {
+    background-color: var(--yellow-hover);
+    color: var(--text-primary-black);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* outline */
+
+.button-outline {
+    background-color: transparent;
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+}
+
+.button-outline:hover {
+    background-color: transparent;
+    color: var(--yellow-hover);
+    border: 2px solid var(--yellow-hover);
+    text-decoration: none;
+}
+
+/* icon button */
+
+.icon-button {
+    padding: 1em;
+    background-color: transparent;
+    fill: var(--bg-primary-white);
+}
+
+.icon-button:hover {
+    fill: var(--red);
+}
+
+.icon-button-outline {
+    padding: 0;
+    border-radius: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    background-color: transparent;
+    fill: var(--bg-primary-white);
+    border: 2px solid var(--bg-primary-white);
+}
+
+.icon-button-outline:hover {
+    background-color: var(--bg-primary-white);
+    fill: var(--bg-primary-black);
+    cursor: pointer;
+}
+
+.icon-button-outline:disabled {
+    background-color: var(--bg-primary-white);
+    fill: var(--bg-primary-black);
+    cursor: pointer;
+}

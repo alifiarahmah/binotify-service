@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+    <endpoint
+            name="TestService"
+            implementation="com.binotify.soap.TestService"
+            url-pattern="/services/test" />
+    <endpoint
+            name="SubscriptionService"
+            implementation="com.binotify.soap.SubscriptionService"
+            url-pattern="/services/subscription" />
+</endpoints>

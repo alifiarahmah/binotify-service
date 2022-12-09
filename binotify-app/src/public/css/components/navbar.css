@@ -1,0 +1,65 @@
+.navbar-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em 1em;
+	height: 10vh;
+}
+
+.navbar-group {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-group>* {
+	display: flex;
+	align-items: center;
+}
+
+.search-bar {
+	display: flex;
+	align-items: center;
+	padding-left: 1em;
+}
+
+.search-bar-container {
+	display: none;
+}
+
+.search-bar-container>input {
+	display: none;
+}
+
+#close-search {
+	display: none;
+}
+
+.auth {
+	display: none;
+}
+
+
+/* Desktop */
+@media screen and (min-width: 768px) {
+	.navbar {
+		padding: 0.5em 1em;
+	}
+
+	#search-icon {
+		display: none;
+	}
+
+	.search-bar-container {
+		display: flex;
+	}
+
+	.auth {
+		display: block;
+	}
+}
+
+.greetings {
+	font-weight: bold;
+	text-align: right;
+	padding-top: 1rem;
+}

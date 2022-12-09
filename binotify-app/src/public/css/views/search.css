@@ -1,0 +1,22 @@
+.search-header {
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	.search-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.search-option-container {
+	display: flex;
+	justify-content: center;
+	column-gap: 1.2rem;
+}
+
+.search-option-container select {
+	padding: 0.5rem;
+	border-radius: 20px;
+}

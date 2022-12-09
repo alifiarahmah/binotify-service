@@ -1,0 +1,27 @@
+.album-details {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.album-info h1 {
+	margin-top: 0;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.album-actions, .song-actions {
+	display: flex;
+	margin-top: 1rem;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#album-picture {
+	justify-content: center;
+	width: 15rem;
+	height: 15rem;
+	border-radius: 50%;
+}

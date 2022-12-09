@@ -1,0 +1,29 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.login-title {
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-input {
+    border: 2px white;
+    border-radius: 8px;
+}
+
+.login-input:focus {
+    color: black;
+    background-color: white;
+}

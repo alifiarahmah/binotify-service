@@ -1,0 +1,37 @@
+version: "3"
+services:
+    php-apache:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        ports:
+            - "8080:80"
+        volumes:
+            - ./src:/var/www/html
+            - ./apache/apache2.conf:/etc/apache2/apache2.conf
+        environment:
+            - MOTD=${MOTD}
+            - BASE_URL=${BASE_URL}
+            - MYSQL_DATABASE=${MYSQL_DATABASE}
+            - MYSQL_USER=root
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+            - REST_BASE_URL=${REST_BASE_URL}
+        links:
+            - mariadb
+        image: binotify-php:latest
+        depends_on:
+            - mariadb
+    mariadb:
+        build:
+            context: .
+            dockerfile: Dockerfile.db
+        restart: always
+        ports:
+            - 9090:3306
+        command: --init-file /docker-entrypoint-initdb.d/binotify.sql
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d
+        environment:
+            - MYSQL_DATABASE=${MYSQL_DATABASE}
+            - MYSQL_USER=root
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}

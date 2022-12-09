@@ -1,0 +1,20 @@
+#premium-artist-container {
+	--templating: 3fr 1fr 1fr;
+}
+
+.premium-artist-header {
+	padding: 0.5rem;
+	display: grid;
+	grid-template-columns: var(--templating);
+	row-gap: 0.5rem;
+	column-gap: 2rem;
+}
+
+.artist-item-container {
+	padding: 0.5rem;
+	display: grid;
+	grid-template-columns: var(--templating);
+	align-items: center;
+	row-gap: 0.5rem;
+	column-gap: 2rem;
+}

@@ -1,0 +1,21 @@
+input {
+	border: none;
+	background-color: transparent;
+	padding: 1em 2em;
+	font-family: 'Poppins', sans-serif;
+	color: var(--text-primary-black);
+	align-items: center;
+}
+
+.input-solid {
+	border-radius: 20px;
+	background-color: var(--bg-primary-white);
+	color: var(--text-primary-black);
+	width: fit-content;
+}
+
+.input-outline {
+	border-radius: 20px;
+	border: 2px solid var(--bg-primary-white);
+	color: var(--text-primary);
+}
